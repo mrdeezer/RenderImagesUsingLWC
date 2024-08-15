@@ -1,0 +1,28 @@
+<!-- imageFromContentDocument.html -->
+<template>
+  <lightning-card>
+    <template if:true={showLoader}>
+      <lightning-spinner alternative-text="Loading"></lightning-spinner>
+    </template>
+    <template if:true={contentDocImage}>
+        <!-- <img src={resizedImageUrl} /> -->
+        <div class="slds-grid">
+          <div class="slds-col slds-size_2-of-12 slds-box slds-box_xx-small slds-m-around_medium">
+            <img src={resizedImageUrl} height="100" width="100" />
+          </div>
+          <div class="slds-col info">
+          <dl class="slds-dl_inline slds-m-around_medium">
+            <dt class="slds-dl_inline__label">Photo Title:</dt>
+            <dd class="slds-dl_inline__detail">{imageTitle}</dd>
+            <dt class="slds-dl_inline__label">Photo Extension:</dt>
+            <dd class="slds-dl_inline__detail">{imageType}l</dd>
+            <dt class="slds-dl_inline__label">Photo Description:</dt>
+            <dd class="slds-dl_inline__detail">{imageDescription}</dd>
+            <dt class="slds-dl_inline__label">Photo Updated on:</dt>
+            <dd class="slds-dl_inline__detail">{imageUploadDate}</dd>
+          </dl>
+        </div>
+      </div>
+      </template>
+  </lightning-card>
+</template>

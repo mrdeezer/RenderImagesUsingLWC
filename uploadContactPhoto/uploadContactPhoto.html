@@ -1,0 +1,10 @@
+<template>
+    <lightning-card>
+        <div class="slds-text-heading_medium slds-m-around_medium">Upload Contact Photo</div>
+        <div class="slds-clearfix slds-m-around_medium">
+            <lightning-input class="slds-float_center" type="file" label="Select an image" onchange={handleFileUpload}></lightning-input>
+        </div>
+        <div class="slds-text-title slds-m-around_medium">Uploading Contact photo will help keeping person's identification sufficient for business use. Remember, photo shall be updated instantly and might be removed if it does not meet guidelines.</div>
+        <lightning-button variant="brand" label="Upload" title="Upload" onclick={handleUpload} class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+</template>
